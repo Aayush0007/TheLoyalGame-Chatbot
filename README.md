@@ -3,6 +3,7 @@
 A full-stack discount chatbot built with Rust, Warp, and WebAssembly. The backend calculates loyalty-based discounts and stores data in Redis, while the frontend provides an interactive chat interface for users to input their phone number and bill amount, receive discounts, and submit feedback.
 
 ---
+
 ## Project Demo
 Watch the demo video: [Click here to play TheLoyalGame Chatbot demo](https://raw.githubusercontent.com/YOUR_USERNAME/TheLoyalGame-Chatbot/main/TheLoyalGame%20ChatBot%20Video.mp4)
 
