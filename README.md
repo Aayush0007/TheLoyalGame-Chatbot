@@ -5,7 +5,7 @@ A full-stack discount chatbot built with Rust, Warp, and WebAssembly. The backen
 ---
 
 ## Project Demo
-Watch the demo video: [Click here to play TheLoyalGame Chatbot demo](https://raw.githubusercontent.com/YOUR_USERNAME/TheLoyalGame-Chatbot/main/TheLoyalGame%20ChatBot%20Video.mp4)
+Watch the demo video: [Click here to play TheLoyalGame Chatbot demo](https://raw.githubusercontent.com/Aayush0007/TheLoyalGame-Chatbot/main/TheLoyalGame%20ChatBot%20Video.mp4)
 
 ## Technical Blog: Building a Discount Chatbot with Rust, Warp, and WebAssembly
 
