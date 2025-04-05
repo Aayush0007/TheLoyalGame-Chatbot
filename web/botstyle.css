@@ -1,0 +1,237 @@
+:root {
+	--primary-color: #2671ff;
+	--success-color: #28a745;
+	--danger-color: #dc3545;
+	--bg-color: #f5f5f5;
+	--text-color: #333;
+	--accent-color: #ffd700;
+	--shadow-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  html, body {
+	height: 100%;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: var(--bg-color);
+	color: var(--text-color);
+  }
+  
+  .chatbox {
+	width: 90%;
+	max-width: 800px;
+	height: calc(var(--vh, 1vh) * 90);
+	margin: 20px auto;
+	box-shadow: 0 4px 12px var(--shadow-color);
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+  }
+  
+  .chat-window {
+	flex: 1;
+	padding: 20px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+  }
+  
+  .chat-input {
+	background: var(--primary-color);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	height: 60px;
+  }
+  
+  .chat-input input {
+	flex: 1;
+	height: 50px;
+	border: none;
+	background: transparent;
+	color: #fff;
+	font-size: 16px;
+	padding: 0 15px;
+	outline: none;
+  }
+  
+  .chat-input button {
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .chat-input button:hover {
+	background: rgba(255, 255, 255, 0.3);
+	transform: scale(1.1);
+  }
+  
+  .talk-bubble-bot, .talk-bubble-user {
+	max-width: 70%;
+	padding: 15px 20px;
+	border-radius: 20px;
+	position: relative;
+	animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .talk-bubble-bot {
+	background: #f0f4ff;
+	margin-right: auto;
+	box-shadow: 0 2px 8px var(--shadow-color);
+  }
+  
+  .talk-bubble-user {
+	background: var(--primary-color);
+	color: #fff;
+	margin-left: auto;
+  }
+  
+  .rating-prompt {
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 4px 12px var(--shadow-color);
+	margin: 15px;
+	text-align: center;
+  }
+  
+  .rating-form {
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 4px 12px var(--shadow-color);
+	margin: 15px;
+	text-align: center;
+  }
+  
+  .rating-form h3 {
+	margin: 0 0 15px;
+	font-size: 1.5em;
+  }
+  
+  .star-rating {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin: 20px 0;
+  }
+  
+  .star {
+	font-size: 32px;
+	cursor: pointer;
+	color: #ddd;
+	transition: color 0.2s ease, transform 0.2s ease;
+	display: inline-block;
+  }
+  
+  .star:hover,
+  .star.hover {
+	color: var(--primary-color); /* Blue on hover */
+	transform: scale(1.1);
+  }
+  
+  .star.selected {
+	color: var(--primary-color); /* Blue when selected */
+	transform: scale(1.1);
+  }
+  
+  .button-group {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 15px;
+  }
+  
+  .btn {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 1em;
+	transition: background 0.3s ease;
+  }
+  
+  .btn.yes {
+	background: var(--success-color);
+	color: #fff;
+  }
+  
+  .btn.no {
+	background: var(--danger-color);
+	color: #fff;
+  }
+  
+  .btn:hover {
+	opacity: 0.9;
+  }
+  
+  .file-upload {
+	margin: 15px 0;
+  }
+  
+  .file-upload input[type="file"] {
+	display: none;
+  }
+  
+  .file-upload label {
+	display: inline-block;
+	padding: 10px 20px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 8px;
+	cursor: pointer;
+  }
+  
+  .file-upload .preview img {
+	margin-top: 10px;
+  }
+  
+  .submit-btn {
+	background: var(--primary-color);
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+	background: darken(var(--primary-color), 10%);
+  }
+  
+  @keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 600px) {
+	.chatbox {
+	  width: 95%;
+	  height: calc(var(--vh, 1vh) * 95);
+	  margin: 10px auto;
+	}
+  
+	.talk-bubble-bot, .talk-bubble-user {
+	  max-width: 90%;
+	}
+  
+	.chat-input input {
+	  font-size: 14px;
+	}
+  }
+  
+  textarea[spellcheck="true"] {
+	/* Ensure the browser's spell-check styling is visible */
+	-webkit-text-fill-color: initial;
+  }
+  
+  textarea[spellcheck="true"]::spelling-error {
+	text-decoration: wavy underline red;
+  }

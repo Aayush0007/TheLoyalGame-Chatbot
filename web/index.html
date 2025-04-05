@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LoyalList Chatbot - Get discounts and provide feedback!">
+  <meta name="author" content="TheLoyalGame Team">
+  <title>LoyalList Chatbot</title>
+  <link rel="stylesheet" href="botstyle.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <main class="chatbox" role="main" aria-label="Chat Interface">
+    <section id="chat-list" class="chat-window" role="log" aria-live="polite">
+      <div class="talk-bubble-bot tri-right round right-in">
+        <div class="bot-text">
+          <p>Hey! I'm TheLoyalGame chatbot!<br>Enter phone_number, bill_amount to get a discount suggestion.<br>Example: <i>9898989898, 600.50</i></p>
+        </div>
+      </div>
+      <div class="talk-bubble-bot tri-right round right-in">
+        <div class="bot-text">
+          <p>Note: Free version offers weekly discounts.<br>Go premium for custom loyalty strategies.<br>Email <i>business@theloyalgame.com</i></p>
+        </div>
+      </div>
+    </section>
+    <form id="chat-form" class="chat-input" onsubmit="return false;" aria-label="Chat Input Form">
+      <input id="input-message" type="text" autocomplete="on" placeholder="Type a message (e.g., 9898989898, 600.50)" aria-label="Enter phone and amount">
+      <button type="submit" aria-label="Send Message">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="rgba(255,255,255,0.8)" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+        </svg>
+      </button>
+    </form>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
